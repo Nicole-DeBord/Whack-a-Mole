@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Whack-a-Mole!</title>
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/whack.js"></script> -->
+	<script>
+	$('document').ready(function() {
+
+		var moleArray = ["mole0", "mole1", "mole2", "mole3", "mole4", "mole5", "mole7", "mole8"];
+
+		// var moleImage = ["'images/twi1.png'"]
+
+		var score = 0;
+
+		setInterval(function() {
+			var mole = "#mole" + Math.floor((Math.random() * 9));
+
+			console.log(mole);
+
+			$(mole).css('background-image', 'url("images/twi1.png")');
+			$(mole).css('background-color', '#000');
+
+
+			$(mole).click(function() {
+				score++;
+				console.log(score);
+				$('.mole').off();
+			});
+				
+		
+			setTimeout(function() {
+				$(mole).css('background-color', '#FFF');
+			}, 1000);
+
+		}, 2000);
+
+		});
+
+
+
+
+
+	// });
+	</script>
+	<style type="text/css">
+
+body {
+	background-image: url("images/mlp_valley.jpg");
+}
+
+#header {
+	text-align: center;
+}
+
+#container {
+	border: 1px solid #000;
+	height: 585px;
+	width: 585px;
+	margin: auto;
+	}
+
+#mole0 {
+	border: 1px solid #000;
+	border-color: #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-top: 25px;
+	margin-left: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left
+}
+
+#mole1 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+
+#mole2 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-top: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+
+#mole3 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	clear: left;
+	float: left;
+}
+
+#mole4 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+
+#mole5 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+
+#mole6 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	clear: left;
+	float: left;
+}
+
+#mole7 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+
+#mole8 {
+	border: 1px solid #000;
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	background-color: #FFF;
+	color: #FFF;
+	float: left;
+}
+	</style>
+</head>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+
+<body>
+<h1 id="header">Whack-a-Mole!</h1>
+
+
+<div id="container">
+
+		<div id="mole0" class="mole">
+
+		</div>
+
+		<div id="mole1" class="mole">
+		
+		</div>
+
+		<div id="mole2" class="mole">
+	
+		</div>
+
+		<div id="mole3" class="mole">
+		
+		</div>
+
+		<div id="mole4" class="mole">
+			
+		</div>
+
+		<div id="mole5" class="mole">
+			
+		</div>
+
+		<div id="mole6" class="mole">
+
+		</div>	
+
+		<div id="mole7" class="mole">
+		</div>
+
+		<div id="mole8" class="mole">
+		</div>	
+
+	</div>
+
+
+<!-- 	<div class="container">
+		<div class="row">
+			
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+		</div>
+
+		<div class="row">
+			
+				<div class="col-md-3">
+					<div class="mole" id="whack">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+		</div>
+
+		<div class="row">
+			
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="mole">
+					</div>
+				</div>
+
+		</div>
+
+	</div> -->
+	
+</body>
+</html>
